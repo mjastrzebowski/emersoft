@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'mrs-list-container',
@@ -7,5 +6,5 @@ import { Store } from '@ngrx/store';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ListContainerComponent {
-  constructor(private store: Store<{}>) {}
+  // constructor(private store: Store<{}>) {}
 }
