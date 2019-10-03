@@ -1,0 +1,14 @@
+{
+  "brace_style": "collapse",
+  "end_with_newline": true,
+  "indent_char": " ",
+  "indent_scripts": "normal",
+  "indent_size": 2,
+  "jslint_happy": true,
+  "max_preserve_newlines": 1,
+  "preserve_newlines": true,
+  "unformatted": ["a", "sub", "sup", "b", "i", "u"],
+  "wrap_indent": 8,
+  "wrap_line_length": 80,
+  "wrap_attributes": "force-aligned"
+}
