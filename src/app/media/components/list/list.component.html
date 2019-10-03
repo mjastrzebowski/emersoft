@@ -1,2 +1,5 @@
-<mrs-list-item *ngFor="let item of items">
-</mrs-list-item>
+<ul>
+  <mrs-list-item *ngFor="let item of items; trackBy: trackItemId"
+                 [item]="item">
+  </mrs-list-item>
+</ul>
