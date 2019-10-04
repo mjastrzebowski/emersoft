@@ -2,11 +2,11 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
-import { Media } from '../models';
-import { getMediaAll, MediaActions } from '../store';
+import { Media } from '../../models';
+import { getMediaAll, MediaActions } from '../../store';
 
 @Component({
-  selector: 'mrs-list-container',
+  selector: 'mrs-media-list-container',
   templateUrl: './list.container.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
