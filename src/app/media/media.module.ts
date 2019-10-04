@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { ListComponent, ListItemComponent, PageComponent } from './components';
 import { ListContainerComponent } from './containers';
-import { FilterModule, OrderModule, SearchModule } from './features';
+import { ClearModule, FilterModule, OrderModule, SearchModule } from './features';
 import { MediaRoutingModule } from './media.routing';
 import { MediaStoreModule } from './store';
 
@@ -18,6 +18,7 @@ const containers = [ListContainerComponent];
     MediaRoutingModule,
     MediaStoreModule,
 
+    ClearModule,
     FilterModule,
     OrderModule,
     SearchModule
