@@ -1,13 +1,21 @@
 [{
     "id": 1,
-    "title": "File 1"
+    "title": "File Audio 1",
+    "type": "audio"
   },
   {
     "id": 2,
-    "title": "File 4"
+    "title": "File Audio 4",
+    "type": "audio"
   },
   {
     "id": 3,
-    "title": "File 7"
+    "title": "File Video 7",
+    "type": "video"
+  },
+  {
+    "id": 4,
+    "title": "File Document",
+    "type": "document"
   }
 ]

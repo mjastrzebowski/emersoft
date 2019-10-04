@@ -2,13 +2,14 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
-import { SearchComponent } from './components';
-import { SearchContainerComponent } from './containers';
-import { SearchStoreModule } from './store';
+import { FilterComponent } from './components';
+import { FilterContainerComponent } from './containers';
+import { FilterStoreModule } from './store';
 
-const components = [SearchComponent];
-const containers = [SearchContainerComponent];
+const components = [FilterComponent];
+const containers = [FilterContainerComponent];
 
 @NgModule({
   declarations: [...components, ...containers],
@@ -17,8 +18,9 @@ const containers = [SearchContainerComponent];
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    SearchStoreModule,
-    MatInputModule
+    FilterStoreModule,
+    MatInputModule,
+    MatSelectModule
   ]
 })
-export class SearchModule {}
+export class FilterModule {}

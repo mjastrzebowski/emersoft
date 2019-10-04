@@ -3,9 +3,8 @@ import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { SearchState } from './search.reducer';
 
 export const searchSelectorName = 'search';
-export const getSearchState = createFeatureSelector<SearchState>(
-  searchSelectorName
-);
+
+const getSearchState = createFeatureSelector<SearchState>(searchSelectorName);
 
 export const getSearchQuery = createSelector(
   getSearchState,

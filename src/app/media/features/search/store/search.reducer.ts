@@ -24,6 +24,10 @@ const reducer = createReducer(
   on(SearchActions.searchSuccess, (state) => ({
     ...state,
     loading: false
+  })),
+
+  on(SearchActions.clear, () => ({
+    ...initialState
   }))
 );
 
