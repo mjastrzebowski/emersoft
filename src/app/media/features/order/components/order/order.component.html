@@ -1,0 +1,10 @@
+<mat-form-field>
+  <mat-label>Order direction:</mat-label>
+  <mat-select [formControl]="input"
+              (selectionChange)="set?.emit($event?.value)">
+    <mat-option *ngFor="let value of values"
+                [value]="value?.value">
+      {{ value?.label }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
