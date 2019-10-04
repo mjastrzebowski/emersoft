@@ -1,24 +1,20 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'list',
-    loadChildren: () => import('./list').then((m) => m.ListModule)
+    path: 'media',
+    loadChildren: () => import('./media').then((m) => m.MediaModule)
   },
   {
     path: '',
-    redirectTo: 'list',
+    redirectTo: 'media',
     pathMatch: 'full'
   }
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forRoot(routes, { enableTracing: false })
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
