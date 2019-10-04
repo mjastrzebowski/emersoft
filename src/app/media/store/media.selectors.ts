@@ -1,6 +1,6 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 
-import { getFilter, getSearchQuery } from '../features';
+import { getFilter, getOrder, getSearchQuery, Order } from '../features';
 import { Media, MediaType } from '../models';
 import { mediaAdapter, MediaState } from './media.reducer';
 
@@ -41,10 +41,17 @@ export const getMediaFiltered = createSelector(
     items
 );
 
-export const getMediaResults = createSelector(
+export const getMediaSearched = createSelector(
   getMediaFiltered,
   getSearchQuery,
   (items: Media[], query: string) =>
     !!items &&
     items.filter(({ title }: Media) => new RegExp(query, 'i').test(title))
+);
+
+export const getMediaResults = createSelector(
+  getMediaSearched,
+  getOrder,
+  (items: Media[], order: Order) =>
+    (!!items && (order === Order.desc && [...items].reverse())) || items
 );

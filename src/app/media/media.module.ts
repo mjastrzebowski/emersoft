@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { ListComponent, ListItemComponent, PageComponent } from './components';
 import { ListContainerComponent } from './containers';
-import { FilterModule, SearchModule } from './features';
+import { FilterModule, OrderModule, SearchModule } from './features';
 import { MediaRoutingModule } from './media.routing';
 import { MediaStoreModule } from './store';
 
@@ -17,8 +17,10 @@ const containers = [ListContainerComponent];
     CommonModule,
     MediaRoutingModule,
     MediaStoreModule,
-    SearchModule,
-    FilterModule
+
+    FilterModule,
+    OrderModule,
+    SearchModule
   ]
 })
 export class MediaModule {}
