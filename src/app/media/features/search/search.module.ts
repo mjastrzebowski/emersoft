@@ -1,5 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
 
 import { SearchComponent } from './components';
 import { SearchContainerComponent } from './containers';
@@ -12,6 +15,12 @@ const containers = [SearchContainerComponent];
   declarations: [...components, ...containers],
   entryComponents: [...containers],
   exports: [...containers],
-  imports: [CommonModule, SearchStoreModule]
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    SearchStoreModule,
+    MatCardModule,
+    MatInputModule
+  ]
 })
 export class SearchModule {}

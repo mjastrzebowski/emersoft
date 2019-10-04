@@ -1,1 +1,1 @@
-export * from './list-item.component';
+export * from './search.component';

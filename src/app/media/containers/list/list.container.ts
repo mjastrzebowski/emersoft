@@ -3,7 +3,7 @@ import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
 import { Media } from '../../models';
-import { getMediaAll, MediaActions } from '../../store';
+import { getMediaResults, MediaActions } from '../../store';
 
 @Component({
   selector: 'mrs-media-list-container',
@@ -11,7 +11,7 @@ import { getMediaAll, MediaActions } from '../../store';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ListContainerComponent implements OnInit {
-  items$: Observable<Media[]> = this.store.pipe(select(getMediaAll));
+  items$: Observable<Media[]> = this.store.pipe(select(getMediaResults));
 
   constructor(private store: Store<{}>) {}
 

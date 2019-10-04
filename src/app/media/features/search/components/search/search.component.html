@@ -1,15 +1,6 @@
-<mat-card>
-  <mat-card-title>Find a media</mat-card-title>
-  <mat-card-content>
-    <mat-form-field>
-      <input matInput
-             placeholder="Search for a media"
-             [value]="query"
-             (keyup)="search?.emit($event?.target?.value)">
-    </mat-form-field>
-    <mat-spinner [class.show]="searching"
-                 [diameter]="30"
-                 [strokeWidth]="3">
-    </mat-spinner>
-  </mat-card-content>
-</mat-card>
+<mat-form-field *ngIf="{ input: input$ | async }">
+  <mat-label>Search by title:</mat-label>
+  <input matInput
+         [formControl]="input"
+         placeholder="Search for a media">
+</mat-form-field>

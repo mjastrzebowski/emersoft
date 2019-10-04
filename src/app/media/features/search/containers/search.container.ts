@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
-import { getSearchLoading, getSearchQuery, SearchActions } from '../../store';
+import { getSearchLoading, getSearchQuery, SearchActions } from '../store';
 
 @Component({
   selector: 'mrs-media-search-container',
