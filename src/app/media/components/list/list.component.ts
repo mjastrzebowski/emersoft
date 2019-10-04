@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Media } from '../../models';
 
 @Component({
-  selector: 'mrs-list',
+  selector: 'mrs-media-list',
   templateUrl: './list.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

@@ -1,0 +1,6 @@
+<mat-form-field *ngIf="{ input: input$ | async }">
+  <mat-label>Search by title:</mat-label>
+  <input matInput
+         [formControl]="input"
+         placeholder="Search for a media">
+</mat-form-field>

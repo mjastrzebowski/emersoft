@@ -1,5 +1,7 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 
+import { getSearchQuery } from '../features';
+import { Media } from '../models';
 import { mediaAdapter, MediaState } from './media.reducer';
 
 export const mediaSelectorName = 'media';
@@ -27,4 +29,12 @@ export const getMediaLoaded = createSelector(
 export const getMediaError = createSelector(
   getMediaState,
   (state: MediaState) => !!state && state.error
+);
+
+export const getMediaResults = createSelector(
+  getMediaAll,
+  getSearchQuery,
+  (items: Media[], query: string) =>
+    !!items &&
+    items.filter(({ title }: Media) => new RegExp(query, 'i').test(title))
 );
